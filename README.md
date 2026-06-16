@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# shankh-creative-os
+Creative AI: A creator-first "Creator OS" built on a sustainable, zero-budget stack. We unify advanced AI assistants, content production, and workflow management into one seamless, Apple-inspired interface. Powered by SHANKH, we replace tab-switching fatigue with high-end, free-tier automation for creators, designers, and entrepreneurs to produce.
+>>>>>>> 0b5e2f8
