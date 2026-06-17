@@ -1,0 +1,35 @@
+import { google } from "googleapis";
+
+export async function appendSignupToSheet(data: {
+  name: string;
+  email: string;
+  phone: string;
+  location: string;
+}) {
+  const auth = new google.auth.GoogleAuth({
+    credentials: {
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    },
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+  });
+
+  const sheets = google.sheets({ version: "v4", auth });
+
+  await sheets.spreadsheets.values.append({
+    spreadsheetId: process.env.GOOGLE_SHEET_ID,
+    range: "Sheet1!A:G",
+    valueInputOption: "USER_ENTERED",
+    requestBody: {
+      values: [[
+        data.name,
+        data.email,
+        data.phone,
+        data.location,
+        new Date().toISOString(),
+        "Web",
+        "Free",
+      ]],
+    },
+  });
+}
